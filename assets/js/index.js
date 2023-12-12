@@ -68,11 +68,12 @@ const attachMuseum = ({id, thumbnail, category, title, like, liked, view, verifi
   listMuseums.appendChild(divEl)
 }
 
-fetch('data.json')
+fetch('data.json') // ADD modalPreviewVirtualion()
   .then(response => response.json())
   .then(data => {
     data.slice(0,12).map(({id, thumbnail, category, title, like, liked, view, verified, link}, index) => attachMuseum({id, thumbnail, category, title ,like, liked, view, verified, link}))
     data.filter(item => item.featured).map(({id, thumbnail, category, title, like, liked, view, verified, link}, index) => attachFeaturedMuseum({id, thumbnail, category, title ,like, liked, view, verified, link}))
+    modalPreviewVirtualion()
   })
   .catch(error => console.log(error));
 
@@ -533,6 +534,8 @@ loadMoreMuseumBtn.addEventListener('click', () => {
       })
       .catch(error => console.log(error));
 })
+
+
 
 
 // Open Drawer Share
