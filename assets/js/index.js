@@ -8,20 +8,20 @@ const attachFeaturedMuseum = ({id, thumbnail, category, title, like, liked, view
         <div class="titleContainer">
           <p class="bodyMediumMedium title">${title}</p>
           <div class="verifiedContainer ${verified && 'show'}">
-            <img class="verifiedIcon" src="/assets/icon/check-verified-icon.png" alt=""/>
+            <img class="verifiedIcon" src="assets/icon/check-verified-icon.png" alt=""/>
           </div>
         </div>
 
         <div class="statistic">
           <div class="item likeBtn ${liked ? "liked" : ""}">
             <!-- Love Icon -->
-            <img src="/assets/icon/heart.png" class="icon like" alt=""/>
-            <img src="/assets/icon/heart-gray.png" class="icon unlike" alt=""/>
+            <img src="assets/icon/heart.png" class="icon like" alt=""/>
+            <img src="assets/icon/heart-gray.png" class="icon unlike" alt=""/>
             <p class="label">${like}</p>
           </div>
           <div class="item">
             <!-- Eye Icon -->
-            <img src="/assets/icon/eye.png" class="icon" alt=""/>
+            <img src="assets/icon/eye.png" class="icon" alt=""/>
             <p class="label">${view}</p>
           </div>
         </div>
@@ -45,20 +45,20 @@ const attachMuseum = ({id, thumbnail, category, title, like, liked, view, verifi
         <div class="titleContainer">
           <p class="bodyMediumMedium title">${title}</p>
           <div class="verifiedContainer ${verified && 'show'}">
-            <img class="verifiedIcon" src="/assets/icon/check-verified-icon.png" alt=""/>
+            <img class="verifiedIcon" src="assets/icon/check-verified-icon.png" alt=""/>
           </div>
         </div>
 
         <div class="statistic">
           <div class="item likeBtn ${liked ? "liked" : ""}">
             <!-- Love Icon -->
-            <img src="/assets/icon/heart.png" class="icon like" alt=""/>
-            <img src="/assets/icon/heart-gray.png" class="icon unlike" alt=""/>
+            <img src="assets/icon/heart.png" class="icon like" alt=""/>
+            <img src="assets/icon/heart-gray.png" class="icon unlike" alt=""/>
             <p class="label">${like}</p>
           </div>
           <div class="item">
             <!-- Eye Icon -->
-            <img src="/assets/icon/eye.png" class="icon" alt=""/>
+            <img src="assets/icon/eye.png" class="icon" alt=""/>
             <p class="label">${view}</p>
           </div>
         </div>
@@ -114,10 +114,10 @@ function searchMuseum() {
 
 //A little delay
 let typingTimer;               
-let typeInterval = 500;  
+let typeInterval = 100;  
 let searchInput = document.getElementById('search-museum');
 
-searchInput.addEventListener('keyup', () => {
+searchInput.addEventListener('change', () => {
     clearTimeout(typingTimer);
     typingTimer = setTimeout(searchMuseum, typeInterval);
 });
